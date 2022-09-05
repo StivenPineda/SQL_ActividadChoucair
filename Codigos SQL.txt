@@ -1,0 +1,61 @@
+Consultas en una sola tabla 
+
+5.	Lista los nombres de los fabricantes ordenados de forma descendente.
+SELECT `nombre` FROM `fabricante` ORDER BY  nombre DESC
+
+6.	Lista los nombres de los productos ordenados de manera Ascendente.
+SELECT `nombre` FROM `producto` ORDER BY  nombre ASC
+
+7.	Lista el código de los fabricantes que tienen productos en la tabla producto, eliminando los códigos que aparecen repetidos.
+SELECT DISTINCT codigo_fabricante FROM producto
+
+8.	Traer los productos que tienen menor precio.
+SELECT * FROM producto ORDER BY precio ASC LIMIT 5;
+
+9.	Traer los cinco productos de mayor precio.
+SELECT * FROM producto ORDER BY precio DESC LIMIT 5;
+
+10.	Realizar la inserción de tres nuevos productos.
+INSERT INTO producto VALUES(12, 'Tablet Lenovo', 500, 2);
+INSERT INTO producto VALUES(13, 'Y9 Prime', 200, 8);
+INSERT INTO producto VALUES(14, 'Protatil Lenovo Gamer', 600, 2);
+
+
+11.	Consultar los productos que sea impresora HP.
+SELECT * FROM producto WHERE codigo_fabricante LIKE "3"
+
+
+12.	Eliminar uno de los nuevos productos creados. 
+DELETE FROM producto WHERE codigo=14;
+
+13.	Actualizar el precio de uno de los productos creados.
+UPDATE producto SET nombre = 'Y20 Prime', precio= '825' WHERE codigo = 13;
+
+14.	Traer los productos que esten dentro del rango de precios 120 y 500.
+SELECT * FROM producto WHERE precio BETWEEN 120 AND 500;
+
+
+Consultas Multitabla
+
+15.	Consultar el nombre de cada fabricante con los productos asociados a ellos.
+	
+
+
+16.	Consultar cada producto con el nombre de cada fabricante 
+17.	Traer los productos asociados cuyo fabricante es “Crucial” con su respectivo nombre.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
