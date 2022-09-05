@@ -38,11 +38,14 @@ SELECT * FROM producto WHERE precio BETWEEN 120 AND 500;
 Consultas Multitabla
 
 15.	Consultar el nombre de cada fabricante con los productos asociados a ellos.
-	
+SELECT f.nombre As "NombreFrabricante",p.* FROM fabricante f LEFT JOIN producto p ON f.codigo = p.codigo_fabricante;
 
 
 16.	Consultar cada producto con el nombre de cada fabricante 
+SELECT p.*,f.nombre As "Nombre Fabricante" FROM producto p INNER JOIN fabricante f ON f.codigo = p.codigo_fabricante;
+
 17.	Traer los productos asociados cuyo fabricante es “Crucial” con su respectivo nombre.
+SELECT p.*,f.nombre As "Nombre Fabricante" FROM producto p INNER JOIN fabricante f ON f.codigo = p.codigo_fabricante WHERE f.nombre="Crucial";
 
 
 
